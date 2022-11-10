@@ -1,0 +1,24 @@
+Execution log for request 4219d258-c98a-4548-9853-3c2aa287741b
+Thu Nov 03 10:17:51 UTC 2022 : Starting execution for request: 4219d258-c98a-4548-9853-3c2aa287741b
+Thu Nov 03 10:17:51 UTC 2022 : HTTP Method: GET, Resource Path: /GTM_GET_TRIGGER_RANDOM_PERCENT
+Thu Nov 03 10:17:51 UTC 2022 : Method request path: {}
+Thu Nov 03 10:17:51 UTC 2022 : Method request query string: {}
+Thu Nov 03 10:17:51 UTC 2022 : Method request headers: {}
+Thu Nov 03 10:17:51 UTC 2022 : Method request body before transformations: 
+Thu Nov 03 10:17:51 UTC 2022 : Endpoint request URI: https://lambda.ap-northeast-1.amazonaws.com/2015-03-31/functions/arn:aws:lambda:ap-northeast-1:851859251602:function:GTM_GET_TRIGGER_RANDOM_PERCENT/invocations
+
+Thu Nov 03 10:17:51 UTC 2022 : Endpoint request headers: {X-Amz-Date=20221103T101751Z, x-amzn-apigateway-api-id=z6zu0fvy9e, Accept=application/json, User-Agent=AmazonAPIGateway_z6zu0fvy9e, Host=lambda.ap-northeast-1.amazonaws.com, X-Amz-Content-Sha256=73fb70e6bdedaf8ff0574a1d7fb8a4e722aced94c0ebcf8f1eb109f77bf86217, X-Amzn-Trace-Id=Root=1-6363954f-a443bdf31695654f0bb30fed, x-amzn-lambda-integration-tag=4219d258-c98a-4548-9853-3c2aa287741b, Authorization=**************************************************************************************************************************************************************************************************************************************************************************************************************************************************a4b41f, X-Amz-Source-Arn=arn:aws:execute-api:ap-northeast-1:851859251602:z6zu0fvy9e/test-invoke-stage/GET/GTM_GET_TRIGGER_RANDOM_PERCENT, X-Amz-Security-Token=IQoJb3JpZ2luX2VjENH//////////wEaDmFwLW5vcnRoZWFzdC0xIkcwRQIhAMMEmpDzOjDGeltI7IQ5ePiuIedlvhDysXe7gvzO [TRUNCATED]
+
+Thu Nov 03 10:17:51 UTC 2022 : Endpoint request body after transformations: {"resource":"/GTM_GET_TRIGGER_RANDOM_PERCENT","path":"/GTM_GET_TRIGGER_RANDOM_PERCENT","httpMethod":"GET","headers":null,"multiValueHeaders":null,"queryStringParameters":null,"multiValueQueryStringParameters":null,"pathParameters":null,"stageVariables":null,"requestContext":{"resourceId":"p2f09n","resourcePath":"/GTM_GET_TRIGGER_RANDOM_PERCENT","httpMethod":"GET","extendedRequestId":"bBREaEibNjMFw1w=","requestTime":"03/Nov/2022:10:17:51 +0000","path":"/GTM_GET_TRIGGER_RANDOM_PERCENT","accountId":"851859251602","protocol":"HTTP/1.1","stage":"test-invoke-stage","domainPrefix":"testPrefix","requestTimeEpoch":1667470671236,"requestId":"4219d258-c98a-4548-9853-3c2aa287741b","identity":{"cognitoIdentityPoolId":null,"cognitoIdentityId":null,"apiKey":"test-invoke-api-key","principalOrgId":null,"cognitoAuthenticationType":null,"userArn":"arn:aws:iam::851859251602:user/arai_toshiaki","apiKeyId":"test-invoke-api-key-id","userAgent":"aws-internal/3 aws-sdk-java/1.12.302 Linux/ [TRUNCATED]
+Thu Nov 03 10:17:51 UTC 2022 : Sending request to https://lambda.ap-northeast-1.amazonaws.com/2015-03-31/functions/arn:aws:lambda:ap-northeast-1:851859251602:function:GTM_GET_TRIGGER_RANDOM_PERCENT/invocations
+Thu Nov 03 10:17:53 UTC 2022 : Received response. Status: 200, Integration latency: 1784 ms
+Thu Nov 03 10:17:53 UTC 2022 : Endpoint response headers: {Date=Thu, 03 Nov 2022 10:17:53 GMT, Content-Type=application/json, Content-Length=567, Connection=keep-alive, x-amzn-RequestId=340cf3a1-8391-4b2f-b29b-4bdd589ac797, X-Amz-Function-Error=Unhandled, x-amzn-Remapped-Content-Length=0, X-Amz-Executed-Version=$LATEST, X-Amzn-Trace-Id=root=1-6363954f-a443bdf31695654f0bb30fed;sampled=0}
+
+Thu Nov 03 10:17:53 UTC 2022 : Endpoint response body before transformations: {"errorType":"Runtime.ImportModuleError","errorMessage":"Error: Cannot find module 'axios'\nRequire stack:\n- /var/task/index.js\n- /var/runtime/index.mjs","trace":["Runtime.ImportModuleError: Error: Cannot find module 'axios'","Require stack:","- /var/task/index.js","- /var/runtime/index.mjs","    at _loadUserApp (file:///var/runtime/index.mjs:951:17)","    at async Object.UserFunction.js.module.exports.load (file:///var/runtime/index.mjs:976:21)","    at async start (file:///var/runtime/index.mjs:1137:23)","    at async file:///var/runtime/index.mjs:1143:1"]}
+
+Thu Nov 03 10:17:53 UTC 2022 : Lambda execution failed with status 200 due to customer function error: Error: Cannot find module 'axios'
+
+Require stack:
+- /var/task/index.js
+- /var/runtime/index.mjs. Lambda request id: 340cf3a1-8391-4b2f-b29b-4bdd589ac797
+Thu Nov 03 10:17:53 UTC 2022 : Method completed with status: 502

@@ -1,0 +1,48 @@
+{
+  "message": "Good day, you of World.",
+  "input": {
+    "resource": "/GTM_GET_TRIGGER_RANDOM_PERCENT",
+    "path": "/GTM_GET_TRIGGER_RANDOM_PERCENT",
+    "httpMethod": "GET",
+    "headers": null,
+    "multiValueHeaders": null,
+    "queryStringParameters": null,
+    "multiValueQueryStringParameters": null,
+    "pathParameters": null,
+    "stageVariables": null,
+    "requestContext": {
+      "resourceId": "p2f09n",
+      "resourcePath": "/GTM_GET_TRIGGER_RANDOM_PERCENT",
+      "httpMethod": "GET",
+      "extendedRequestId": "bBQtAFe0NjMF3EA=",
+      "requestTime": "03/Nov/2022:10:15:21 +0000",
+      "path": "/GTM_GET_TRIGGER_RANDOM_PERCENT",
+      "accountId": "851859251602",
+      "protocol": "HTTP/1.1",
+      "stage": "test-invoke-stage",
+      "domainPrefix": "testPrefix",
+      "requestTimeEpoch": 1667470521480,
+      "requestId": "822df4d6-8737-4e0f-a903-b5d105c64b61",
+      "identity": {
+        "cognitoIdentityPoolId": null,
+        "cognitoIdentityId": null,
+        "apiKey": "test-invoke-api-key",
+        "principalOrgId": null,
+        "cognitoAuthenticationType": null,
+        "userArn": "arn:aws:iam::851859251602:user/arai_toshiaki",
+        "apiKeyId": "test-invoke-api-key-id",
+        "userAgent": "aws-internal/3 aws-sdk-java/1.12.302 Linux/5.4.209-129.367.amzn2int.x86_64 OpenJDK_64-Bit_Server_VM/25.352-b08 java/1.8.0_352 vendor/Oracle_Corporation cfg/retry-mode/standard",
+        "accountId": "851859251602",
+        "caller": "AIDA4MVWEUGJLGQH3S2IT",
+        "sourceIp": "test-invoke-source-ip",
+        "accessKey": "ASIA4MVWEUGJDYHJNIHF",
+        "cognitoAuthenticationProvider": null,
+        "user": "AIDA4MVWEUGJLGQH3S2IT"
+      },
+      "domainName": "testPrefix.testDomainName",
+      "apiId": "z6zu0fvy9e"
+    },
+    "body": null,
+    "isBase64Encoded": false
+  }
+}

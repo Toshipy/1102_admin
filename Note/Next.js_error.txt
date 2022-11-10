@@ -1,0 +1,12 @@
+localhost/:1 Access to fetch at 'https://z6zu0fvy9e.execute-api.ap-northeast-1.amazonaws.com/default/GTM_GET_TRIGGER_RANDOM_PERCENT' from origin 'http://localhost:3000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
+
+curl -H "Origin: http://localhost:3000" --head https://z6zu0fvy9e.execute-api.ap-northeast-1.amazonaws.com/default/GTM_GET_TRIGGER_RANDOM_PERCENT
+
+HTTP/2 200 
+date: Thu, 03 Nov 2022 12:32:54 GMT
+content-type: application/json
+content-length: 40
+x-amzn-requestid: 73346dc7-fb2f-4767-9509-fe8223244bde
+x-amzn-remapped-content-length: 40
+x-amz-apigw-id: bBk2METSNjMFvKg=
+x-amzn-trace-id: Root=1-6363b4f4-18ff0c7e796fd9665110f923;Sampled=0

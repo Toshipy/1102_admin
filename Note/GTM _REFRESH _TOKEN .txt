@@ -1,0 +1,127 @@
+curl 'https://securetoken.googleapis.com/v1/token?key=AIzaSyAWf7iUjJE-Q898xaF0XgG_UHVAez5SZ7E' \
+-H 'Content-Type: application/x-www-form-urlencoded' \
+--data 'grant_type=refresh_token&refresh_token=[REFRESH_TOKEN]'
+
+API＿KEY=AIzaSyAWf7iUjJE-Q898xaF0XgG_UHVAez5SZ7E
+
+
+{
+  "web": {
+    "client_id": "368121318632-d9doqnb2jbtnabusq97b5vmfge91ep0e.apps.googleusercontent.com",
+    "project_id": "sysco-354101",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_secret": "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",
+    "redirect_uris": ["http://localhost"]
+  }
+}
+
+${SCOPE} = https://www.googleapis.com/auth/tagmanager.readonly
+
+
+$ echo "https://accounts.google.com/o/oauth2/v2/auth?redirect_uri=${REDIRECT_URI}&client_id=${CLIENT_ID}&scope=${SCOPE}&response_type=code&access_type=offline"
+
+
+echo "https://accounts.google.com/o/oauth2/v2/auth?redirect_uri=http://localhost&client_id=368121318632-d9doqnb2jbtnabusq97b5vmfge91ep0e.apps.googleusercontent.com&scope=https://www.googleapis.com/auth/tagmanager.readonly&response_type=code&access_type=offline"
+
+http://localhost/?code=4/0ARtbsJr_BwO2e5hyckiny1es9GRfYBZaCI0daqlTxoyJs5O03UEQ8GB0MP91itU6OAj-HA&scope=https://www.googleapis.com/auth/tagmanager.readonly
+
+4/0ARtbsJr_BwO2e5hyckiny1es9GRfYBZaCI0daqlTxoyJs5O03UEQ8GB0MP91itU6OAj-HA
+
+$ REDIRECT_URI=http://localhost
+$ CLIENT_ID=<先程控えたクライアントID>
+$ CLIENT_SECRET=<先程控えたクライアントシークレット>
+$ AUTHORIZATION_CODE=<先程控えた認証コード>
+
+$ curl --data "redirect_uri=http://localhost" \
+     --data "client_id=368121318632-d9doqnb2jbtnabusq97b5vmfge91ep0e.apps.googleusercontent.com" \
+     --data "client_secret=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" \
+     --data "code=4/0ARtbsJr_BwO2e5hyckiny1es9GRfYBZaCI0daqlTxoyJs5O03UEQ8GB0MP91itU6OAj-HA" \
+     --data "grant_type=authorization_code" \
+     --data "access_type=offline" \
+     https://www.googleapis.com/oauth2/v4/token
+
+
+{
+"access_token": "ya29.a0Aa4xrXOHl-pNRtF34NsYfnO2QAd8ed-P8i8qrLE91ndiNn3WuUJ5ezftedvPv9B0Y7oapRwQZRYtsY7AjxXCB7WAymEuNloXPqHgANQyZMcZRvt8dCOPQJV9DaKACcr4X8VYD2w_YMkojSfqblRykAz7-379aCgYKATASARESFQEjDvL9jTexb6YS8rFWjWfhGzG6Hw0163",
+"expires_in": 3599,
+"refresh_token": "1//0eJCjotfjd5JICgYIARAAGA4SNwF-L9IrhQouf_uTELQMvybE8QWZ6Udycd6MmcjF8JvyhHj4IFEJWxBUYAZVHXiTM7y0IIcMeV0",
+"scope": "https://www.googleapis.com/auth/tagmanager.readonly",
+"token_type": "Bearer"
+}
+
+
+curl -XPOST https://www.googleapis.com/oauth2/v4/token --data "code=[Authorization code]&redirect_uri=http://localhost&client_id=368121318632-d9doqnb2jbtnabusq97b5vmfge91ep0e.apps.googleusercontent.com&client_secret=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&scope=&grant_type=authorization_code"
+
+----------------------------------------------------------------------
+
+CLIENT_ID	368121318632-d9doqnb2jbtnabusq97b5vmfge91ep0e.apps.googleusercontent.com
+CLIENT_SECRET	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
+GCP_API_KEY	AIzaSyAWf7iUjJE-Q898xaF0XgG_UHVAez5SZ7E
+GTM_ACCOUNT_ID	6013324323
+GTM_CONTAINER_ID	94791074
+GTM_TRIGGER_ID	9
+REFRESH_TOKEN	
+
+----------------------------------------------------------------------
+
+■Scopeの確認
+参考記事：https://developers.google.com/oauthplayground/
+からTag Manager API の editを使う
+↓
+https://www.googleapis.com/auth/tagmanager.edit.containers
+
+
+
+■Authorization Codeの取得
+https://accounts.google.com/o/oauth2/auth?
+  client_id=[クライアントID]&
+  redirect_uri=http://localhost&
+  scope=[スコープ]&
+  response_type=code&
+  access_type=offline
+↓
+https://accounts.google.com/o/oauth2/auth?
+  client_id=368121318632-d9doqnb2jbtnabusq97b5vmfge91ep0e.apps.googleusercontent.com&
+  redirect_uri=http://localhost&
+  scope=https://www.googleapis.com/auth/tagmanager.edit.containers&
+  response_type=code&
+  access_type=offline
+
+上のURLを新しいページで貼り付ける
+↓
+ページにはアクセスできないが、URLをコピーする
+http://localhost/?code=4/0ARtbsJomUuDo-xe2caJmB8ax-7gqxMXJ3FWZafnAw7tc9uvtPPUcZUDm1wnSdJ-CYAWJ_A&scope=https://www.googleapis.com/auth/tagmanager.edit.containers
+
+
+■REFRESH_TOKENの取得
+
+curl -XPOST https://www.googleapis.com/oauth2/v4/token --data "code=[Authorization code]&redirect_uri=http://localhost&client_id=[クライアントID]&client_secret=[クライアントシークレット]&scope=&grant_type=authorization_code"
+
+↓
+
+curl -XPOST https://www.googleapis.com/oauth2/v4/token --data "code=http://localhost/?code=4/0ARtbsJomUuDo-xe2caJmB8ax-7gqxMXJ3FWZafnAw7tc9uvtPPUcZUDm1wnSdJ-CYAWJ_A&scope=https://www.googleapis.com/auth/tagmanager.edit.containers&redirect_uri=http://localhost&client_id=368121318632-d9doqnb2jbtnabusq97b5vmfge91ep0e.apps.googleusercontent.com&client_secret=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&scope=&grant_type=authorization_code"
+
+errorになったから以前の方法で試す↓
+いや多分authorizationが間違えてる
+
+curl -XPOST https://www.googleapis.com/oauth2/v4/token --data "code=4/0ARtbsJomUuDo-xe2caJmB8ax-7gqxMXJ3FWZafnAw7tc9uvtPPUcZUDm1wnSdJ-CYAWJ_A&scope=https://www.googleapis.com/auth/tagmanager.edit.containers&redirect_uri=http://localhost&client_id=368121318632-d9doqnb2jbtnabusq97b5vmfge91ep0e.apps.googleusercontent.com&client_secret=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&scope=&grant_type=authorization_code"
+
+できた↓結果
+
+{
+  "access_token": "ya29.a0Aa4xrXOr71maZ7EgIJBc0PLEipY-uPyRnTzN2sWigVDmCDZt4zM0NRB3Rk_dbnY-Ub_fpz-masB_467e4fRCdrrLzjA_QUUWXO9HG9VMsx1hw6fA7vpPXySIZ44tiS5Yq9eZdImI48m9vaSjWcu9PTjiE--NaCgYKAQASARESFQEjDvL9-PsX78rXmpmvPMmvbZT6DA0163",
+  "expires_in": 3599,
+  "refresh_token": "1//0ef5ZZzi5JZ4SCgYIARAAGA4SNwF-L9IrZSSs-cNfgP9p4H3KI0jaZiCvBsYO9_2DK_xFinP14rGtVw0R-T-8x6iwIDNI3qF7c8Y",
+  "scope": "https://www.googleapis.com/auth/tagmanager.edit.containers",
+  "token_type": "Bearer"
+}%  
+
+ "refresh_token": "1//0ef5ZZzi5JZ4SCgYIARAAGA4SNwF-L9IrZSSs-cNfgP9p4H3KI0jaZiCvBsYO9_2DK_xFinP14rGtVw0R-T-8x6iwIDNI3qF7c8Y",
+
+1//0ef5ZZzi5JZ4SCgYIARAAGA4SNwF-L9IrZSSs-cNfgP9p4H3KI0jaZiCvBsYO9_2DK_xFinP14rGtVw0R-T-8x6iwIDNI3qF7c8Y
+
+
+
+https://tagmanager.googleapis.com/tagmanager/v2/accounts/${process.env.GTM_ACCOUNT_ID}/containers/${process.env.GTM_CONTAINER_ID}
